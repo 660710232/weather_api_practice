@@ -13,7 +13,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   User? userData;
-  TextEditingController _idSearchController = TextEditingController();
+  final TextEditingController _idSearchController = TextEditingController();
   void fetchUser() async {
     try {
       var response = await http.get(Uri.parse("https://dummyjson.com/users/${_idSearchController.text}"));
