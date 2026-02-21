@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:weather_api_practice/screen/weather_screen.dart';
+// import 'package:weather_api_practice/screen/weather_screen.dart';
+import 'package:weather_api_practice/screen/list_user_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -32,7 +33,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const WeatherScreen(),
+      home: const ListUserScreen(),
     );
   }
 }
