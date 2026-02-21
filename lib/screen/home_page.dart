@@ -47,7 +47,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             Text("Name : ${userData?.firstName}"),
-            Text("Username : ${userData?.username}"),
+            Text("LastName : ${userData?.lastName}"),
             Text("Email : ${userData?.email}"),
             ElevatedButton(
               onPressed: () {
