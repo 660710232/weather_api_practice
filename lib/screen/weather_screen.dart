@@ -16,6 +16,12 @@ class WeatherScreen extends StatefulWidget {
 class _WeatherScreenState extends State<WeatherScreen> {
   Weather? weatherData;
   // final TextEditingController _idSearchController = TextEditingController();
+  @override
+  void initState() {
+    super.initState();
+    fetchWeather();
+  }
+
   void fetchWeather() async {
     try {
       var response = await http.get(
@@ -51,23 +57,38 @@ class _WeatherScreenState extends State<WeatherScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-          Text(weatherData!.city, style: TextStyle(color: Colors.black, fontSize: 30, fontWeight: FontWeight.bold),),
-          SizedBox(height: 10,),
+            Text(
+              weatherData!.city,
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 30,
+                fontWeight: FontWeight.bold,
+              ),
+              textAlign: TextAlign.center,
+            ),
+            SizedBox(height: 10),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                SizedBox(width: 10,),
+                SizedBox(width: 10),
                 ColorBox(
                   color: Colors.green,
                   aqi: weatherData == null ? '0' : weatherData!.aqi,
                 ),
-                SizedBox(width: 10,),
+                SizedBox(width: 10),
               ],
             ),
             SizedBox(height: 15),
             TextWeatherBox(aqi: weatherData == null ? '0' : weatherData!.aqi),
             SizedBox(height: 10),
-            Text('temperature: ${weatherData!.temperature} C', style: TextStyle(color: Colors.black, fontSize: 18, fontWeight: FontWeight.bold),),
+            Text(
+              'temperature: ${weatherData!.temperature} C',
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
             ElevatedButton(
               onPressed: () {
                 setState(() {
