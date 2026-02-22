@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 // import 'package:weather_api_practice/screen/weather_screen.dart';
-import 'package:weather_api_practice/screen/list_user_screen.dart';
-import 'package:weather_api_practice/screen/list_user_screen_v2.dart';
 import 'package:weather_api_practice/screen/weather_screen.dart';
 
 void main() {

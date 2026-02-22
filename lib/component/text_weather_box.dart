@@ -32,7 +32,6 @@ class TextWeatherBox extends StatelessWidget {
     }
     return text;
   }
-
   @override
   Widget build(BuildContext context) {
     return SizedBox(
